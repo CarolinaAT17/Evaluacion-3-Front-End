@@ -1,4 +1,18 @@
-body{
+body {
     padding-top: 10px;
     background-color: gray;
 }
+
+footer div a {
+    text-decoration: none;
+}
+
+.responsive-iframe-videos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
