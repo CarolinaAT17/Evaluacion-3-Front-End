@@ -36,9 +36,7 @@
                                 </button>
                                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                                     <div class="navbar-nav">
-                                        <a class="nav-link active" aria-current="page" href="PrimeraPagina.css">INICIO</a>
-                                        <a class="nav-link" href="#">EQUIPO</a>
-                                        <a class="nav-link" href="#">CONTACTO</a>
+                                        <a class="nav-link active" aria-current="page" href="PrimeraPagina.html">INICIO</a>
                                         <a class="nav-link" href="PaginaRegistro.html">REGISTRO</a>
                                     </div>
                                 </div>
@@ -55,10 +53,10 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                            <a class="nav-link active" aria-current="page" href="#">PELICULAS Y SERIES</a>
-                            <a class="nav-link" href="#">TOP 10</a>
-                            <a class="nav-link" href="#">RETIROS Y ESTRENOS</a>
-                            <a class="nav-link">PODCAST</a>
+                            <a class="nav-link active" aria-current="page" href="#PS">PELICULAS Y SERIES POPULARES</a>
+                            <a class="nav-link" href="#Podcast">PODCAST</a>
+                            <a class="nav-link" href="#">EQUIPO</a>
+                            <a class="nav-link" href="#">CONTACTO</a>
                         </div>
                     </div>
                 </div>
@@ -125,7 +123,7 @@
                 <hr>
                 <!-- SERIES / PELICULAS -->
                 <div class="row">
-                    <h2 class="text-center">Peliculas Y Series</h2> 
+                    <h2 class="text-center" id="PS">Peliculas Y Series</h2> 
                     <div class="col-md-6">
                         <div id="carouselPeliculas" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
@@ -179,7 +177,54 @@
                     </div>
                 </div>
                 <hr>
-            </div>
+                <!--Podcast-->
+                <div class="col">
+                    <h2 class="text-center" id="Podcast">Podcast sugeridos</h2>
+                    <div id="carouselNoticias" class="carousel slide text-center" data-bs-ride="false">
+                        <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselNoticias" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselNoticias" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselNoticias" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/img.png" alt="..." width="250" height="250">
+                                <h4 class="card-title">THE MISFIST</h4>
+                                <a class="btn btn-primary" href="https://open.spotify.com/show/5DH39Q6ZpMeP0Y24eLbdIi?si=f7a9f50be8344917">Ir</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/img.png" alt="..." width="250" height="250">
+                                <h4 class="card-title">Devorando Comics</h4>
+                                <a href="https://open.spotify.com/show/6dYRuOsPRRM5QM3hjbvuSx?si=643087991e6f457a" class="btn btn-primary">Ir</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/img.png" alt="..." width="250" height="250">
+                                    <h5 class="card-title">Comicverso</h5>
+                                    <a href="https://open.spotify.com/show/7GiKW4WQmX2ytrGHniqa2C?si=11ea3e2d17924498o" class="btn btn-primary">Ir</a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselNoticias" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselNoticias" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
         </article>
         <br>
         <hr>
