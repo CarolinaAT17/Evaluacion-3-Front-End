@@ -64,20 +64,6 @@ function validar()
         return false;
     }
 
-    //suscripcion (no veo necesario comprobar)
-    // let suscripcion = document.getElementsByType("checkbox");
-    // let cont = 0;
-    // for(let i = 0; i < suscripcion.length; i++){
-    //     if(suscripcion[i].checked) {
-    //         cont++;
-    //     }
-    //     if(cont>3) {
-    //         alert("Debe marcar menos de 3 casillas");
-    //         return false;
-    //     }
-    // }
-
-
     //acepta EULA
     let contrato = document.getElementsByName("rdo_EULAyOtros");
     if(!contrato[0].checked) {
