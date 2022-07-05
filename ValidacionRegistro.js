@@ -1,50 +1,93 @@
 function validar()
 {
     //Nombre y apellido
-    let nombre = document.getElementById("nombre");
+    let nombre = document.getElementById("txt_NombreYApellido");
     let expNombre = /^[A-Za-zÑñÁÉÍÓÚáéíóú]+(\s[A-Za-zÑñÁÉÍÓÚáéíóú]+)*$/;
     if(!expNombre.test(nombre.value)){
         alert("Solo letras y espacios, máximo 25 caracteres");
         nombre.focus();
-        return;
+        return false;
     }
 
     //Nombre usuario
-    let usuario = document.getElementById("usuario");
+    let usuario = document.getElementById("txt_NombreDeUsuario");
     let expUsuario = /^[A-Za-zÑñÁÉÍÓÚáéíóú]+(\s[A-Za-zÑñÁÉÍÓÚáéíóú]+)*$/;
     if(!expUsuario.test(usuario.value)){
         alert("Solo letras y espacios, máximo 25 caracteres");
         nombre.focus();
-        return;
+        return false;
     }
 
     //Correo Electronico
+    // innecesario, el input:email automaticamente pide un formato de correo
 
     //Numero telefonico
-    let telefono = document.getElementById("telefono");
+    let telefono = document.getElementById("txt_NumeroTelefonico");
     let expTelefono = /^\d{9}$/;
     if(!telefono.value.match(expTelefono)){
         alert("Movil no valido");
         movil.focus();
-        return;
+        return false;
     }
 
     //RUT
+    let rut = document.getElementById("txt_RUTDNI");
+    let expRut = /^\d{8}-\d{1}$/; //formato 12345678-9
+    if (!rut.value.match(expRut)) {
+        alert("Formato RUT no valido");
+        rut.focus();
+        return false;
+    }
 
     //Comuna
+    let comuna = document.formulario.slc_Comuna;
+    if (comuna.value.length==0) {
+        alert("Debe seleccionar una comuna");
+        comuna.focus();
+        return false;
+    }
 
     //Genero
-
-    //suscripcion
-    let suscripcion = document.getElementsByName("checkbox");
-    let cont = 0;
-    for(let i = 0; i < suscripcion.length; i++){
-        if(suscripcion[i].checked){
-            cont++;
+    let genero = document.getElementsByName("rdo_Genero");
+    let seleccionado = false;
+    for(let i=0; i<genero.length; i++) {
+        // por cada radiobutton rdo_Genero verifica que uno este marcado
+        if(genero[i].checked) {
+            // si uno de los 3 rdo_Genero esta marcado, seleccionado = true
+            seleccionado = true;
+            break;
         }
-    if(cont>3){
-        alert("Debe marcar menos de 3 casillas");
-        return;
     }
+    if(!seleccionado) { // solo entra si no se ha seleccionado ningun rdo_Genero
+        // si seleccionado = false: ningun rdo_Genero esta marcado, entonces mensaje
+        alert("Debe seleccionar un genero");
+        return false;
     }
+
+    //suscripcion (no veo necesario comprobar)
+    // let suscripcion = document.getElementsByType("checkbox");
+    // let cont = 0;
+    // for(let i = 0; i < suscripcion.length; i++){
+    //     if(suscripcion[i].checked) {
+    //         cont++;
+    //     }
+    //     if(cont>3) {
+    //         alert("Debe marcar menos de 3 casillas");
+    //         return false;
+    //     }
+    // }
+
+
+    //acepta EULA
+    let contrato = document.getElementsByName("rdo_EULAyOtros");
+    if(!contrato[0].checked) {
+        alert("Debe aceptar el contrato");
+        return false;
+    }
+
+    alert("Registrado")
+
+    // recursos utilizados
+    // https://www.adictosaltrabajo.com/2015/01/29/regexsam/
+    // https://uniwebsidad.com/libros/javascript/capitulo-7/validacion
 }
