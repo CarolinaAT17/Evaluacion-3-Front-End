@@ -71,7 +71,8 @@ function validar()
         return false;
     }
 
-    alert("Registrado")
+    alert("Registrado");
+    alert("Nombre y Apellido: "+nombre.value+"\nNombre de Usuario: "+usuario.value+"\nTelefono: "+ telefono.value+"\nRUT: "+rut.value+"\nComuna: "+comuna.value)
 
     // recursos utilizados
     // https://www.adictosaltrabajo.com/2015/01/29/regexsam/
